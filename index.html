@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Under the Same Sky</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<!-- 流れ星 -->
+<div id="shooting-star"></div>
+  <!-- 合言葉画面 -->
+  <section id="password-screen">
+
+    <div class="password-box">
+
+      <p class="small-text">FOR YOU</p>
+
+      <h2>
+        寂しくなった時に見てね
+      </h2>
+
+      <p class="message">
+        合言葉わかるかな？😸
+      </p>
+
+      <input
+        type="password"
+        id="password"
+        placeholder="合言葉"
+      >
+
+      <button id="enter-button">
+        Enter
+      </button>
+
+      <p id="error-message"></p>
+
+    </div>
+
+  </section>
+
+
+  <!-- サイト本体 -->
+  <main id="main-site">
+
+    <section class="hero">
+
+    
+
+      <h2>
+        ねこねこ掲示板へようこそ🤗
+      </h2>
+
+      <p>
+        留学中にしか見れない期間限定サイトだよ<br>
+      </p>
+
+    </section>
+
+    <section class="letter-section">
+
+        <p class="small-text">A LETTER FOR YOU</p>
+      
+        <h3>はじめに</h3>
+      
+        <div class="letter-card">
+      <p>オーストラリアに行けなくなってしまったのは本当にごめんなさい。
+        離れている中で溝ができてしまった今、自分にしかできなくて何かできることがないかを考えた結果、
+        こういう形で日頃の感謝や愛を伝えるのがいいかなと思ったので作ってみました。
+    これなら好きなタイミングで見返すこともできるしいいかなって一生懸命考えました。
+    こういうのきも！ってなっちゃうタイプだと思うから、ここから先は進まないでも大丈夫。
+俺が勝手に作って勝手に送り付けてるだけだから気が向いたら進んで行ってみてね。
+週に何回か更新しようと考えてます！ブログ的なのだから負担とかは考えないでねー😸</p>
+        </div>
+      
+      </section>
+
+<section class="memories-section">
+
+    <p class="small-text">OUR MEMORIES</p>
+  
+    <h3>かわい子ちゃんコレクション</h3>
+  
+    <p class="memories-intro">
+      俺得でしかないかわい子ちゃんの写真集だよ😸<br>
+      随時更新！
+    </p>
+  
+  
+    <div class="memory-grid">
+  
+      <!-- 写真1 -->
+      <div class="memory-card">
+  
+        <img
+          src="images/1.jpeg"
+          alt="二人の思い出"
+        >
+  
+        <div class="memory-text">
+  
+          <p class="memory-date">
+            2026.00.00
+          </p>
+  
+          <h3>横浜デート</h3>
+  
+          <p>
+            クリスマスマーケットさんぽ楽しかったあ！
+            横浜デートっていう王道したね🤭
+          </p>
+  
+        </div>
+  
+      </div>
+  
+  
+      <!-- 写真2 -->
+      <div class="memory-card">
+  
+        <img
+          src="images/2.JPG"
+          alt="二人の思い出"
+        >
+  
+        <div class="memory-text">
+  
+          <p class="memory-date">
+            2026.00.00
+          </p>
+  
+          <h3>いつ撮ったか忘れた</h3>
+  
+          <p>
+            いつ撮ったか忘れたけど可愛すぎて死亡。ぱっつんかわいいねえ😍
+          </p>
+  
+        </div>
+  
+      </div>
+  
+  
+      <!-- 写真3 -->
+      <div class="memory-card">
+  
+        <img
+          src="images/3.jpeg"
+          alt="二人の思い出"
+        >
+  
+        <div class="memory-text">
+  
+          <p class="memory-date">
+            2026.00.00
+          </p>
+  
+          <h3>えのすい！</h3>
+  
+          <p>
+            この日もビジュ良かったねー🙂‍↕️勝手に自撮りしてくれてありがとうって感じで大好きだよ
+          </p>
+  
+        </div>
+  
+      </div>
+  
+  
+      <!-- 写真4 -->
+      <div class="memory-card">
+  
+        <img
+          src="images/4.JPG"
+          alt="二人の思い出"
+        >
+  
+        <div class="memory-text">
+  
+          <p class="memory-date">
+            2026.00.00
+          </p>
+  
+          <h3>赤ちゃん</h3>
+  
+          <p>
+            これ赤ちゃんすぎてお気に入り！キュートアグレッション特大を起こしたので保護させていただきます。
+          </p>
+  
+        </div>
+  
+      </div>
+  
+    </div>
+  
+  </section>
+  <section class="favorite-section">
+
+    <p class="small-text">THINGS I LOVE ABOUT YOU</p>
+  
+    <h2>好きなところ</h2>
+  
+    <p class="favorite-intro">
+      星をタップしてみて！まだまだ追加してくからお楽しみに😊
+    </p>
+  
+    <div class="star-grid">
+  
+      <button class="love-star" data-message="笑ってるときの顔だーいすき！">
+        ★
+      </button>
+  
+      <button class="love-star" data-message="いつも向きあってくれるところ！">
+        ★
+      </button>
+  
+      <button class="love-star" data-message="自己肯定感爆上げにしてくれる！">
+        ★
+      </button>
+  
+      <button class="love-star" data-message="何でも肯定してくれて前向きなとこ！">
+        ★
+      </button>
+  
+      <button class="love-star" data-message="一緒にいるだけで楽しいとこ！">
+        ★
+      </button>
+  
+      <button class="love-star" data-message="愛情表現が上手なところ！">
+        ★
+      </button>
+  
+    </div>
+  
+    <div id="love-message">
+      星をひとつ選んでね。
+    </div>
+  
+  </section>
+  <section class="open-when-section">
+
+    <p class="small-text">OPEN WHEN...</p>
+  
+    <h3>こんなときに開いてね</h3>
+  
+    <p class="open-when-intro">
+      今の気持ちに近いものを選んでみて。
+    </p>
+  
+    <div class="when-grid">
+  
+      <button
+        class="when-card"
+        data-title="寂しいとき"
+        data-message="すぐ会いに行けなくてごめんね。素直に寂しいって言ってくれたら電話とかならできるから、ためらわずに言ってね。これ乗り越えたら結婚するんだよね！そう考えたら今の一人時間も貴重だよ😊全力で今のそっちの生活を楽しんでね！離れていてもいつでも味方でいるからね。"
+      >
+        <span class="when-icon">🌙</span>
+        <span>寂しいとき</span>
+      </button>
+  
+  
+      <button
+        class="when-card"
+        data-title="疲れたとき"
+        data-message="今日もお疲れさま！毎日頑張ってること、知ってるよ。弱音を吐きたいはずなのに、前向きに頑張っていてすごいや。尊敬しているよ。今日もよく頑張りました！抱っこして欲しかったら連絡してね😊よちよち赤ちゃん今日はゆっくり休んでね。"
+      >
+        <span class="when-icon">⭐</span>
+        <span>疲れたとき</span>
+      </button>
+  
+  
+      <button
+        class="when-card"
+        data-title="落ち込んだとき"
+        data-message="元気なくなっちゃったの赤ちゃん。そんな日もあるよね。無理して元気を装わないでたまには好きなことしてみよ！美味しいもの食べたりお友達と遊んだりおれとゲームでもいいよお😎毎日頑張っててえらいね。遠くからずっと応援しているからね、大好き。"
+      >
+        <span class="when-icon">☁️</span>
+        <span>落ち込んだとき</span>
+      </button>
+  
+  
+      <button
+        class="when-card"
+        data-title="会いたいとき"
+        data-message="ずっと会いたいと思ってます！この時間が強くしてくれると願って今日も頑張っているよ。会いに行けなくなったのはごめんなさい。でも会いたい気持ちはずっと持ってるし、すぐに行けない自分が悔しいです。帰ってきたら、もういいよってくらい会おうね！"
+      >
+        <span class="when-icon">❤️</span>
+        <span>会いたいとき</span>
+      </button>
+  
+    </div>
+  
+  
+    <!-- 開いた手紙 -->
+  
+    <div id="when-letter">
+  
+      <button id="when-close">×</button>
+  
+      <p class="small-text">
+        A LITTLE LETTER
+      </p>
+  
+      <h3 id="when-title"></h3>
+  
+      <p id="when-message"></p>
+  
+    </div>
+  
+  </section>
+  <section class="ending-section">
+
+    <p class="small-text">UNDER THE SAME SKY</p>
+  
+    <h3>
+      最後に
+    </h3>
+  
+    <p class="ending-message">
+      色々迷惑をかけてしまったり、傷つけてしまったこともあるけど、気持ちは変わらずずうーっと好きです。怖いくらいにね。ずっと思ってくれている人がいることに感謝して明日からも頑張るよ。いつもありがとう。その気持ちをもう無駄にしないようにします。たくさんごめんね。最後まで見てくれてありがとう。
+    </p>
+  
+    <p class="ending-love">
+      大好きだよ。
+    </p>
+  
+    <div class="ending-star">
+      ✦
+    </div>
+  
+  </section>
+  </main>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
