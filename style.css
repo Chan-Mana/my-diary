@@ -859,3 +859,81 @@
   
     background: rgba(255,255,255,0.16);
   }
+  /* =========================
+   RELATIONSHIP COUNTER
+========================= */
+
+.counter-section {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 100px 24px 140px;
+    text-align: center;
+  
+    position: relative;
+    z-index: 2;
+  }
+  
+  .counter-section h2 {
+    font-size: clamp(2rem, 7vw, 3.5rem);
+    margin: 12px 0 35px;
+  }
+  
+  .counter-box {
+    display: grid;
+  
+    grid-template-columns: repeat(4, 1fr);
+  
+    gap: 12px;
+  }
+  
+  .counter-item {
+    padding: 22px 10px;
+  
+    border-radius: 20px;
+  
+    background: rgba(255,255,255,0.06);
+  
+    border: 1px solid rgba(255,255,255,0.12);
+  
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+  
+  .counter-item span {
+    display: block;
+  
+    font-size: clamp(1.7rem, 7vw, 3rem);
+  
+    font-weight: 600;
+  
+    text-shadow:
+      0 0 12px rgba(255,255,255,0.4);
+  }
+  
+  .counter-item small {
+    display: block;
+  
+    margin-top: 8px;
+  
+    font-size: 10px;
+  
+    letter-spacing: 0.12em;
+  
+    color: rgba(255,255,255,0.45);
+  }
+  
+  .counter-message {
+    margin-top: 28px;
+  
+    color: rgba(255,255,255,0.65);
+  
+    letter-spacing: 0.05em;
+  }
+  
+  @media (max-width: 500px) {
+  
+    .counter-box {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+  }

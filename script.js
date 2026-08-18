@@ -374,3 +374,72 @@ const memories = [
     }, 400);
   
   });
+  // ==============================
+// 付き合ってからのカウンター
+// ==============================
+
+// ↓ここを付き合った日時に変更
+const relationshipStart =
+new Date("2025-12-15T00:00:00");
+
+
+function updateRelationshipCounter() {
+
+const now = new Date();
+
+const difference =
+  now - relationshipStart;
+
+
+// 日
+const days =
+  Math.floor(
+    difference / (1000 * 60 * 60 * 24)
+  );
+
+
+// 時間
+const hours =
+  Math.floor(
+    (difference / (1000 * 60 * 60)) % 24
+  );
+
+
+// 分
+const minutes =
+  Math.floor(
+    (difference / (1000 * 60)) % 60
+  );
+
+
+// 秒
+const seconds =
+  Math.floor(
+    (difference / 1000) % 60
+  );
+
+
+document.getElementById("days").textContent =
+  days;
+
+document.getElementById("hours").textContent =
+  hours;
+
+document.getElementById("minutes").textContent =
+  minutes;
+
+document.getElementById("seconds").textContent =
+  seconds;
+
+}
+
+
+// 最初に一回表示
+updateRelationshipCounter();
+
+
+// 1秒ごとに更新
+setInterval(
+updateRelationshipCounter,
+1000
+);
