@@ -112,6 +112,88 @@
         </div>
       
       </section>
+<!-- =========================
+     思い出マップ
+========================= -->
+
+<section class="map-section">
+
+    <p class="small-text">OUR MEMORY MAP</p>
+  
+    <h2>絶景マップ</h2>
+  
+    <p class="map-intro">
+      二人で見た景色を地図に残していこう😊
+    </p>
+  
+  
+    <!-- 日本地図 -->
+    <div class="japan-map">
+  
+      <img
+        src="images/japan-map.png"
+        class="map-image"
+        alt="日本地図"
+      >
+  
+  
+      <!-- 神奈川県 -->
+      <button
+        type="button"
+        class="map-pref-pin"
+        data-pref="kanagawa"
+        data-name="神奈川県"
+        style="top:67%; left:57%;"
+        aria-label="神奈川県の思い出を見る"
+      >
+        📍
+      </button>
+  
+  
+      <!-- 山梨県 -->
+      <button
+        type="button"
+        class="map-pref-pin"
+        data-pref="yamanashi"
+        data-name="山梨県"
+        style="top:65%; left:54.5%;"
+        aria-label="山梨県の思い出を見る"
+      >
+        📍
+      </button>
+  
+      <button
+  type="button"
+  class="map-pref-pin"
+  data-pref="shizuoka"
+  data-name="静岡県"
+  style="top:69%; left:55%;"
+>
+  📍
+</button>
+    </div>
+  
+  
+    <!-- 選択中の県 -->
+    <div class="map-pref-header">
+  
+      <p id="map-pref-name">
+        地図のピンをタップしてみてね📍
+      </p>
+  
+    </div>
+  
+  
+    <!--
+      JavaScriptで
+      「写真＋一言」をここに表示する
+    -->
+    <div
+      id="map-memory-list"
+      class="map-memory-list"
+    ></div>
+  
+  </section>
 
 <section class="memories-section">
 
@@ -323,6 +405,7 @@
   
   </section>
 
+  <section class="favorite-section">
     <p class="small-text">THINGS I LOVE ABOUT YOU</p>
   
     <h3>好きなところ</h3>
@@ -361,7 +444,11 @@
         ★
       </button>
 
-      <button class="love-star" data-message="俺の好きなもに興味持ってくれるとこ！">
+      <button class="love-star" data-message="俺の好きなものに興味持ってくれるとこ！">
+        ★
+      </button>
+
+      <button class="love-star" data-message="よちよちしてくれるところー🥰">
         ★
       </button>
 

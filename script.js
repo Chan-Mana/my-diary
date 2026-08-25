@@ -443,3 +443,213 @@ setInterval(
 updateRelationshipCounter,
 1000
 );
+// ==============================
+// 思い出マップ
+// ==============================
+
+const mapMemories = {
+
+    kanagawa: [
+        {
+            title: "みなとみらい",
+            image: "images/map/みなとみらい.jpeg",
+            text: "夜景最高！😆"
+          },
+      {
+        title: "城ヶ島",
+        image: "images/map/城ヶ島.jpeg",
+        text: "岩場に座ってみる夕日最高すぎ🤩"
+      },
+      {
+        title: "毘沙門",
+        image: "images/map/毘沙門.jpeg",
+        text: "風車行くまでの道いいよねえ！"
+      },
+      {
+        title: "インディ",
+        image: "images/map/インディージョーンズ.jpeg",
+        text: "道終わってるけど景色はいいんだよねえ！"
+      },
+      {
+        title: "長者ヶ崎",
+        image: "images/map/長者ヶ崎.jpeg",
+        text: "夕日と海が最高😆"
+      },
+      {
+        title: "mori mori",
+        image: "images/map/morimori.jpeg",
+        text: "イルミネーションが綺麗！昼は自然も見えるよ👀"
+      },
+
+    ],
+  
+    yamanashi: [
+      {
+        title: "山中湖",
+        image: "images/map/山中湖.jpeg",
+        text: "まじ最高だよね。空気がうますぎる😋"
+      },
+      {
+        title: "山中湖　朝の車内から",
+        image: "images/map/山中湖　朝.jpeg",
+        text: "真っ白ですごかったね👀雨の朝も雰囲気あってよし！"
+      },
+      {
+        title: "忍野八海",
+        image: "images/map/忍野八海.jpeg",
+        text: "水の透明度やばかったね！"
+      },
+      {
+        title: "本栖湖",
+        image: "images/map/本栖湖.jpeg",
+        text: "静かすぎて驚いた！自然って感じでいいとこ！"
+      },
+      {
+        title: "鳴沢氷穴",
+        image: "images/map/鳴沢氷穴.jpeg",
+        text: "ひんやりスポット👀 ナルトじゃなくて鳴沢ね🤗"
+      },
+      {
+        title: "身延",
+        image: "images/map/身延.jpeg",
+        text: "桜咲いててめっちゃ良かった！この街なんか好き🤭"
+      },
+    ],
+
+    shizuoka: [
+      
+      ]
+  
+  };
+  
+  
+  // ピン
+  const mapPrefPins =
+    document.querySelectorAll(".map-pref-pin");
+  
+  // 選択中の県名
+  const mapPrefName =
+    document.getElementById("map-pref-name");
+  
+  // 思い出表示エリア
+  const mapMemoryList =
+    document.getElementById("map-memory-list");
+  
+  
+  mapPrefPins.forEach(function(pin) {
+  
+    pin.addEventListener("click", function() {
+  
+      const pref =
+        pin.dataset.pref;
+  
+      const prefName =
+        pin.dataset.name;
+  
+  
+      // 選択中ピン
+      mapPrefPins.forEach(function(item) {
+  
+        item.classList.remove("active");
+  
+      });
+  
+      pin.classList.add("active");
+  
+  
+      // 県名表示
+      mapPrefName.textContent =
+        `📍 ${prefName}`;
+  
+  
+      // 一旦空にする
+      mapMemoryList.innerHTML = "";
+  
+  
+      const memories =
+        mapMemories[pref] || [];
+  
+  
+      // 思い出がない場合
+      if (memories.length === 0) {
+  
+        const empty =
+          document.createElement("div");
+  
+        empty.className =
+          "map-memory-empty";
+  
+        empty.textContent =
+          "もう少しお待ちを🤭";
+  
+        mapMemoryList.appendChild(empty);
+  
+        return;
+  
+      }
+  
+  
+      // 写真＋一言を作る
+      memories.forEach(function(memory, index) {
+  
+        const card =
+          document.createElement("article");
+  
+        card.className =
+          "map-memory-card";
+  
+        // 少しずつ出現
+        card.style.animationDelay =
+          `${index * 0.08}s`;
+  
+  
+        const image =
+          document.createElement("img");
+  
+        image.src =
+          memory.image;
+  
+        image.alt =
+          memory.title;
+  
+  
+        const content =
+          document.createElement("div");
+  
+        content.className =
+          "map-memory-content";
+  
+  
+        const title =
+          document.createElement("h4");
+  
+        title.className =
+          "map-memory-title";
+  
+        title.textContent =
+          memory.title;
+  
+  
+        const text =
+          document.createElement("p");
+  
+        text.className =
+          "map-memory-text";
+  
+        text.textContent =
+          memory.text;
+  
+  
+        content.appendChild(title);
+        content.appendChild(text);
+  
+        card.appendChild(image);
+        card.appendChild(content);
+  
+        mapMemoryList.appendChild(card);
+  
+      });
+  
+    });
+  
+  });
