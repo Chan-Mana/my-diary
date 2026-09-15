@@ -1224,3 +1224,182 @@
   
   }
   
+  /* =========================
+   今日のひとこと
+========================= */
+
+.daily-message-section {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 100px 24px 120px;
+    text-align: center;
+  
+    position: relative;
+    z-index: 2;
+  }
+  
+  .daily-message-section h3 {
+    font-size: clamp(2rem, 7vw, 3.5rem);
+    margin: 12px 0 35px;
+  }
+  
+  
+  /* メッセージカード */
+  
+  .daily-message-card {
+    max-width: 520px;
+    margin: 0 auto;
+  
+    padding: 42px 28px 30px;
+  
+    border-radius: 26px;
+  
+    background: rgba(255,255,255,0.06);
+  
+    border: 1px solid rgba(255,255,255,0.12);
+  
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+  
+    box-shadow:
+      0 20px 60px rgba(0,0,0,0.25);
+  
+    position: relative;
+    overflow: hidden;
+  }
+  
+  
+  /* 💌 */
+  
+  .daily-message-icon {
+    font-size: 38px;
+    margin-bottom: 24px;
+  
+    filter:
+      drop-shadow(0 0 12px rgba(255,255,255,0.35));
+  }
+  
+  
+  /* 今日の文章 */
+  
+  #daily-message {
+    margin: 0;
+  
+    font-size: 18px;
+    line-height: 2;
+  
+    color: rgba(255,255,255,0.92);
+  
+    letter-spacing: 0.03em;
+  }
+  
+  
+  /* 日付 */
+  
+  #daily-date {
+    margin: 24px 0 0;
+  
+    font-size: 12px;
+  
+    color: rgba(255,255,255,0.4);
+  
+    letter-spacing: 0.12em;
+  }
+  
+  
+  /* また明日 */
+  
+  .daily-message-note {
+    margin-top: 20px;
+  
+    color: rgba(255,255,255,0.45);
+  
+    font-size: 13px;
+  }
+  
+  
+  /* スマホ */
+  
+  @media (max-width: 500px) {
+  
+    .daily-message-section {
+      padding: 90px 20px 110px;
+    }
+  
+    .daily-message-card {
+      padding: 36px 22px 26px;
+    }
+  
+    #daily-message {
+      font-size: 16px;
+    }
+  
+  }
+  /* 今日のひとことボタン */
+
+.daily-message-button {
+    border: none;
+    background: transparent;
+    color: white;
+  
+    cursor: pointer;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    gap: 10px;
+  
+    margin: 0 auto;
+  
+    transition: transform 0.25s ease;
+  }
+  
+  .daily-message-button span {
+    font-size: 48px;
+  
+    filter:
+      drop-shadow(0 0 14px rgba(255,255,255,0.4));
+  }
+  
+  .daily-message-button small {
+    font-size: 13px;
+  
+    color: rgba(255,255,255,0.6);
+  
+    letter-spacing: 0.05em;
+  }
+  
+  .daily-message-button:hover {
+    transform: scale(1.08);
+  }
+  
+  
+  /* 最初はメッセージを隠す */
+  
+  #daily-message-content {
+    display: none;
+  }
+  
+  
+  /* 開いた状態 */
+  
+  #daily-message-content.show {
+    display: block;
+  
+    animation: dailyMessageOpen 0.6s ease;
+  }
+  
+  @keyframes dailyMessageOpen {
+  
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  
+  }

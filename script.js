@@ -653,3 +653,91 @@ const mapMemories = {
     });
   
   });
+
+  // ==============================
+// 今日のひとこと
+// ==============================
+
+const dailyMessages = [
+    "今日も世界一かわいいおれの赤ちゃん🥰",
+    "いつまでもずーっと大好きだ！",
+    "無理しすぎないでね。頑張りすぎ注意！",
+    "今日も一日頑張るぞっ😊",
+    "自然界隈を目標にこっちも頑張ってます！😉",
+    "今日も俺のかわい子ちゃんです🥰",
+    "疲れたらちゃんと休んでね。ご飯たくさん食べよう🍚",
+    "ばぶの笑顔が世界一！額縁に入れて飾りたい（変態）",
+    "あけぼの行ったら何食べたい？🤤",
+    "よちよちよちよちちゅちゅちゅ",
+    "顔が本当に好きです。顔も。",
+    "ちゅーしたい。はむはむされたい。わしゃわしゃして。",
+    "頑張り屋さんなおれのばぶぶだいすき😊",
+    "えっちすぎるところもだいすきだ。襲いたい。えへ",
+    "帰ってきたらまずどこ行く？🤭　なに食べる？🤤",
+    "やりたいこと、行きたいとこたくさんだ！早く帰ってこーい！🤭",
+    "公園でお昼寝してから美味しいもの食べてって早くやりたいな🤭",
+    "どんな家に住む？ベッドはもちろん一つでお風呂は一緒に入るからね😉",
+    
+  ];
+  
+  const dailyMessage =
+    document.getElementById("daily-message");
+  
+  const dailyDate =
+    document.getElementById("daily-date");
+  
+  
+  if (dailyMessage && dailyDate) {
+  
+    const today = new Date();
+  
+    const year = today.getFullYear();
+    const month = today.getMonth() + 1;
+    const day = today.getDate();
+  
+  
+    // 日付ごとに番号を作る
+    const dateNumber =
+      Math.floor(
+        new Date(year, month - 1, day).getTime()
+        / 86400000
+      );
+  
+  
+    // 今日表示するメッセージを決定
+    const messageIndex =
+      dateNumber % dailyMessages.length;
+  
+  
+    dailyMessage.textContent =
+      dailyMessages[messageIndex];
+  
+  
+    // 日付表示
+    dailyDate.textContent =
+      `${year}.${String(month).padStart(2, "0")}.${String(day).padStart(2, "0")}`;
+  
+      
+  }
+  // ==============================
+// 今日のひとことを開く
+// ==============================
+
+const dailyMessageButton =
+document.getElementById("daily-message-button");
+
+const dailyMessageContent =
+document.getElementById("daily-message-content");
+
+
+if (dailyMessageButton && dailyMessageContent) {
+
+dailyMessageButton.addEventListener("click", function() {
+
+  dailyMessageContent.classList.add("show");
+
+  dailyMessageButton.style.display = "none";
+
+});
+
+}
